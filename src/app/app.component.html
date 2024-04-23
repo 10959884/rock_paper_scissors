@@ -1,0 +1,53 @@
+<!-- <div class="badge"><div class="badge1" id="user-label">User : {{userSelected}}</div>
+  <div class="badge2" id="comp-label">Computer :{{compSelected}}</div>
+</div> -->
+
+
+<div class="container">
+  <div class="banner">
+    <div class="header-name">
+      <h4>Rocks</h4>
+      <h4>Paper</h4>
+      <h4>Scissors</h4>
+    </div>
+
+    <div class="score">
+
+      <h3>score</h3>
+      <span id="user-score">{{userScore}}:</span><span id="comp-score">{{compScore}}</span>
+
+    </div>
+  </div>
+
+
+  <div class="result" *ngIf="status">
+    <!-- {{userSelected}} {{action}} {{compSelected}} -->
+    {{status}}
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <div class="head">
+        <h1>Computer</h1>
+      </div>
+      <img class="com" id="comp-scissors" src="./assets/scissors.png" alt="Scissors">
+      <img class="com" id="comp-rock" src="./assets/rock.png" alt="Rock">
+      <img class="com" id="comp-paper" src="./assets/paper.png" alt="Paper">
+
+    </div>
+  </div>
+
+
+
+  <div class="options">
+    <img class="choice" id="rock" src="./assets/rock.png" (click)='userPick("rock")'>
+    <img class="choice" id="paper" src="./assets/paper.png" (click)='userPick("paper")'>
+    <img class="choice" id="scissors" src="./assets/scissors.png" (click)='userPick("scissors")'>
+  </div>
+
+  <h4 id="action-message" *ngIf="!status">You Can Make Your Move</h4>
+  <h4 id="action-message" *ngIf="status">Wait...</h4>
+
+
+  <div class="rules"><button>Rules</button></div>
+
+</div>
