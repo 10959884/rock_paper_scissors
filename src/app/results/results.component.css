@@ -1,0 +1,17 @@
+
+
+.status {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem; /* Adjust font size as needed */
+    color: white; /* Adjust color as needed */
+    z-index: 9999; /* Ensure it appears above other content */
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+}
+
+.status.show {
+    opacity: 1; /* Show the status message */
+}

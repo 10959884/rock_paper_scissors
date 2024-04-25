@@ -1,0 +1,39 @@
+<main class="main">
+    <!-- <div class="user-selection">
+        <img [src]="'../../assets/images/icon-' + userSelected + '.svg'" >
+        <img class="choice"  [src]="'../../assets/images/icon-' + compSelected + '.svg'">
+    </div> -->
+
+    
+    <!-- <img id="triangle" src="../../assets/images/bg-triangle.svg">
+     -->
+    <div class="options">
+       
+        <img class="choice" id="paper" src="../../assets/images/icon-paper.svg" (click)="userPick('paper')">
+        <img class="choice" id="scissors" src="../../assets/images/icon-scissors.svg" (click)="userPick('scissors')">
+        <img class="choice" id="rock" src="../../assets/images/icon-rock.svg" (click)="userPick('rock')">
+        
+    </div>
+
+
+
+    
+    <!-- <div class="rules"><button (click)="goToRulesPage()" routerLink="rules">Rules</button></div> -->
+    
+    <div class="rules">
+        <div class="test">
+            
+            <button type="button"  id="btn" (click)="openPopup()"> Rules</button>
+        </div>
+        
+        
+    <div class="pop" id="popup">
+        <img class="close" src="../../assets/images/icon-close.svg" (click)="closePopup()">
+        <h1>RULES</h1>
+        <img class="img-rules"  src="../../assets/images/image-rules.svg" alt="Rules">
+    </div>
+</div>
+
+
+
+</main>

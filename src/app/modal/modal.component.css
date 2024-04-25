@@ -1,0 +1,23 @@
+h1 {
+    color: grey;
+}
+
+
+
+.modal-content {
+
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    
+    cursor: pointer;
+}
+
+
+.close:hover {
+    transform: scale(1.2);
+}
