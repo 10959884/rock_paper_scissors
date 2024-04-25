@@ -8,9 +8,8 @@
     font-size: 0px;
 }
 
-.choice:hover {
-    transform: scale(1.2); 
-}
+
+
 #scissors:hover {
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7); /* Adjust the shadow color and spread as needed */}
     #rock:hover {
@@ -61,7 +60,8 @@ border-radius: 100%;
 
 
 .choice {
-    position: absolute;
+    margin-top: 160px;
+    position: sticky;
     left: 60%;
     transform: translate(-50%, -50%);
     cursor: pointer;
@@ -70,7 +70,7 @@ border-radius: 100%;
     cursor: pointer;
     border-radius: 200px;
     padding: 60px;
-    top: 90%;
+    
 
 }
 
@@ -82,15 +82,10 @@ border-radius: 100%;
 }
 
 
-.choice:hover {
-    transform: scale(1.2);
-}
 
 
-.com{   
-    
-    padding: 60px;
-}
+
+
 
     
 /* #comp-paper {
@@ -123,7 +118,7 @@ border-radius: 100%;
 
 button {
     
-    margin: 100px;
+    margin-left: 10px;
     background-color: rgb(2, 22, 31);
     --glow-color: rgb(130, 177, 231);
     --glow-spread-color: rgba(63, 20, 163, 0.781);
@@ -134,7 +129,6 @@ button {
     color: var(--glow-color);
     font-size: 15px;
     font-weight: bold;
-    /* background-color: var(--btn-color); */
     border-radius: 1em;
     outline: none;
     box-shadow: 0 0 1em .25em var(--glow-color),
@@ -146,16 +140,14 @@ button {
 }
 .btn-test{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: end;
+    
 }
 
 button::after {
     pointer-events: none;
     content: "";
-    top: 120%;
-    height: 100%;
-    width: 100%;
     background-color: var(--glow-spread-color);
     filter: blur(2em);
     opacity: .7;
@@ -186,7 +178,21 @@ span {
     font-size: 30px;
 
 }
+.play-again-section{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1000px;
+    
+}
+.selection{
 
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    gap: 3rem;
+    
+
+}
 .pop{
     color: rgb(71, 69, 69);
     width: 400px;

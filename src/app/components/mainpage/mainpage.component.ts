@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { ServiceService } from '../../services/service.service';
 import { CommonModule } from '@angular/common';
-import { ResultsComponent } from '../../results/results.component';
 
 
 @Component({
   selector: 'app-mainpage',
   standalone: true,
-  imports: [CommonModule,ResultsComponent],
+  imports: [CommonModule],
   templateUrl: './mainpage.component.html',
   styleUrl: './mainpage.component.css'
 })
@@ -25,7 +24,7 @@ export class MainpageComponent {
   userSelected: string | undefined;
   compSelected: string | undefined;
   status: string | undefined;
-  
+  displaySelections = false;
 
   constructor(private service: ServiceService) { }
 
@@ -33,13 +32,27 @@ export class MainpageComponent {
     this.userSelected = userWeapon;
     const randomNum = Math.floor(Math.random() * 3);
     this.compSelected = this.compWeapons[randomNum];
+    this.displaySelections = true;
     this.checkResult();
 
 
+    const compSelectedElement = document.getElementById(`comp-${this.compSelected}`);
+    if (compSelectedElement) {
+      compSelectedElement.classList.add('highlight');
+      setTimeout(() => {
+        compSelectedElement.classList.remove('highlight');
+      }, 1000);
+    }
 
-  
+    this.checkResult();
   }
 
+  resetGame(): void {
+    this.userSelected = undefined;
+    this.compSelected = undefined;
+    this.displaySelections = false;
+
+  }
 
 
   clearField() {
@@ -117,5 +130,7 @@ export class MainpageComponent {
     }
   }
 
-  
+  displaySelection() {
+
+  }
 }

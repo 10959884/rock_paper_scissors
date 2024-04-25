@@ -1,18 +1,26 @@
 <main class="main">
-    <!-- <div class="user-selection">
-        <img [src]="'../../assets/images/icon-' + userSelected + '.svg'" >
-        <img class="choice"  [src]="'../../assets/images/icon-' + compSelected + '.svg'">
-    </div> -->
 
-    
     <!-- <img id="triangle" src="../../assets/images/bg-triangle.svg">
      -->
+     <div class="selection">
+        
+        <img class="user" [src]="'../../assets/images/icon-' + userSelected + '.svg'" alt="">
+        <img class="computer"  [src]="'../../assets/images/icon-' + compSelected + '.svg'"alt="">
+     </div>
+     <div class="play-again-section"*ngIf="displaySelections">
+        
+    
+        <div class="winlosedraw" [hidden]="!status">{{status}} </div>
+        <button class="play-again" (click)="resetGame()">Play Again</button>
+    
+        
+        </div>
+    
     <div class="options">
        
         <img class="choice" id="paper" src="../../assets/images/icon-paper.svg" (click)="userPick('paper')">
         <img class="choice" id="scissors" src="../../assets/images/icon-scissors.svg" (click)="userPick('scissors')">
         <img class="choice" id="rock" src="../../assets/images/icon-rock.svg" (click)="userPick('rock')">
-        
     </div>
 
 
@@ -33,6 +41,13 @@
         <img class="img-rules"  src="../../assets/images/image-rules.svg" alt="Rules">
     </div>
 </div>
+
+
+
+
+    
+    
+    
 
 
 

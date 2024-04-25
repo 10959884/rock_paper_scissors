@@ -17,12 +17,13 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeComponent implements OnInit, OnDestroy {
 
-
   router: any;
   userScore: any;
   compScore: any;
   private userScoreSubscription: Subscription | undefined;
   private compScoreSubscription: Subscription | undefined;
+  userSelectedOption: string | null = null;
+  userHasSelected: boolean = false;
 
 
   constructor(private service: ServiceService) {
@@ -47,8 +48,15 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.userScoreSubscription?.unsubscribe();
     this.compScoreSubscription?.unsubscribe();
   }
- 
-  
+  userPick(option: string) {
+    this.userSelectedOption = option;
+    
+  }
+  resetGame() {
+    this.userSelectedOption = null;
+    this.userScore = 0;
+    this.compScore = 0;
+  }
 
   // goToRulesPage(): void {
   //   this.router.navigate(['/rules']);

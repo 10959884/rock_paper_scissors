@@ -13,9 +13,11 @@
      </div>
  </div>
  
- 
  <div>
-    <app-mainpage></app-mainpage>
-    <app-results ></app-results>
-
+    <app-mainpage *ngIf="!userHasSelected" (userPick)="userPick('rock')"></app-mainpage>
+    <app-results *ngIf="userHasSelected" (resetGame)="resetGame()"></app-results>
+    
+    
+    
+    
 </div>
