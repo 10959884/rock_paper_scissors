@@ -3,9 +3,63 @@
 .main{
     position: relative;
 }
+
+
+
+#paper {
+    background-color: #f7f7f7;
+    transform: translate(-80%, 110%) rotate(-11deg) translateY(-80%);
+border-radius: 100%;
+    box-shadow: 0 0 0 30px rgba(11, 7, 241, 0.781) inset;
+.rule{
+    color: grey;
+    left: 10%;
+}
+
+
+}
+.reset{
+    
+    height: 70px;
+}
+
+.user {
+    background-color: #ffffff;
+    
+    box-shadow: 0 0 0 30px rgba(36, 36, 33, 0.651) inset;
+    width: 150px;
+    border-radius: 200px;
+    padding: 60px;
+
+}
+
+.computer {
+    background-color: #ffffff;
+    box-shadow: 0 0 0 30px rgba(36, 36, 33, 0.651) inset;
+    width: 150px;
+    border-radius: 200px;
+    padding: 60px;
+    margin-left: 10px;
+}
+
+.playAgain {
+    width: 100%;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playAgainContent {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
 .winlosedraw{
+    
+    display: flex;
+    justify-content: center;
     color: #f7f7f7;
-    font-size: 0px;
 }
 
 
@@ -60,14 +114,13 @@ border-radius: 100%;
 
 
 .choice {
-    margin-top: 160px;
+    margin-top: 260px;
     position: sticky;
     left: 60%;
     transform: translate(-50%, -50%);
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
     width: 150px;
-    cursor: pointer;
     border-radius: 200px;
     padding: 60px;
     
@@ -87,32 +140,8 @@ border-radius: 100%;
 
 
 
-    
-/* #comp-paper {
-    background-color: #f7f7f7;
-border-radius: 100%;
-    margin: auto;
-    box-shadow: 0 0 0 30px rgba(11, 7, 241, 0.781) inset;
+  
 
-
-
-}
-
-#comp-scissors {
-    background-color: #ffffff;
-    border-radius: 100%;
-    margin: auto;
-    box-shadow: 0 0 0 30px rgba(249, 253, 0, 0.651) inset;
-
-}
-
-#comp-rock {
-    background-color: #ffffff;
-    border-radius: 100%;
-    margin: auto;
-    box-shadow: 0 0 0 30px rgba(250, 2, 2, 0.719) inset;
-
-} */
 
 
 
@@ -181,7 +210,7 @@ span {
 .play-again-section{
     display: flex;
     justify-content: center;
-    padding-bottom: 1000px;
+    
     
 }
 .selection{

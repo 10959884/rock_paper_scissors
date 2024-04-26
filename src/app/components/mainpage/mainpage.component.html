@@ -2,21 +2,23 @@
 
     <!-- <img id="triangle" src="../../assets/images/bg-triangle.svg">
      -->
-     <div class="selection">
-        
-        <img class="user" [src]="'../../assets/images/icon-' + userSelected + '.svg'" alt="">
-        <img class="computer"  [src]="'../../assets/images/icon-' + compSelected + '.svg'"alt="">
-     </div>
-     <div class="play-again-section"*ngIf="displaySelections">
-        
+
+     <div class="winlosedraw" *ngIf="playAgain"><h1>{{ status }}</h1></div>
+
+    <div class="playAgain" *ngIf="playAgain">
+        <div class="playAgainContent">
+            <img class="user" [src]="'../../assets/images/icon-' + userSelected + '.svg'" alt="">
+
+            <div class="play-again-section" >
     
-        <div class="winlosedraw" [hidden]="!status">{{status}} </div>
-        <button class="play-again" (click)="resetGame()">Play Again</button>
-    
-        
+                <button class="reset" (click)="resetGame()">Play Again</button>
+            </div>
+            <img class="computer" [src]="'../../assets/images/icon-' + compSelected + '.svg'" alt="">
+
         </div>
+    </div>
     
-    <div class="options">
+    <div class="options" *ngIf="!playAgain">
        
         <img class="choice" id="paper" src="../../assets/images/icon-paper.svg" (click)="userPick('paper')">
         <img class="choice" id="scissors" src="../../assets/images/icon-scissors.svg" (click)="userPick('scissors')">
@@ -28,7 +30,7 @@
     
     <!-- <div class="rules"><button (click)="goToRulesPage()" routerLink="rules">Rules</button></div> -->
     
-    <div class="rules">
+    <div class="rules" *ngIf="!playAgain">
         <div class="test">
             
             <button type="button"  id="btn" (click)="openPopup()"> Rules</button>
@@ -37,7 +39,7 @@
         
     <div class="pop" id="popup">
         <img class="close" src="../../assets/images/icon-close.svg" (click)="closePopup()">
-        <h1>RULES</h1>
+        <h1 class="rule">RULES</h1>
         <img class="img-rules"  src="../../assets/images/image-rules.svg" alt="Rules">
     </div>
 </div>

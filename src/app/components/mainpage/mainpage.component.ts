@@ -24,7 +24,7 @@ export class MainpageComponent {
   userSelected: string | undefined;
   compSelected: string | undefined;
   status: string | undefined;
-  displaySelections = false;
+  playAgain = false;
 
   constructor(private service: ServiceService) { }
 
@@ -32,8 +32,8 @@ export class MainpageComponent {
     this.userSelected = userWeapon;
     const randomNum = Math.floor(Math.random() * 3);
     this.compSelected = this.compWeapons[randomNum];
-    this.displaySelections = true;
-    this.checkResult();
+    this.playAgain = true;
+    
 
 
     const compSelectedElement = document.getElementById(`comp-${this.compSelected}`);
@@ -50,17 +50,17 @@ export class MainpageComponent {
   resetGame(): void {
     this.userSelected = undefined;
     this.compSelected = undefined;
-    this.displaySelections = false;
+    this.playAgain = false;
 
   }
 
 
   clearField() {
-    setTimeout(() => {
-      this.status = '';
-      this.userSelected = '';
-      this.compSelected = '';
-    }, 1500);
+    // setTimeout(() => {
+    //   this.status = '';
+    //   this.userSelected = '';
+    //   this.compSelected = '';
+    // }, 1500);
   }
 
 
